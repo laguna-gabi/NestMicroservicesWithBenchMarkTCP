@@ -7,7 +7,6 @@ export class AppController {
 
   @Get()
   getHello() {
-    const data = this.client.send('microservice1', { data: 'test' });
-    return data;
+    return this.client.send('microservice1', { data: 'test' });
   }
 }
